@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-container {
+  @apply w-full 2xl:w-[1450px] mx-auto;
+}
+
+.logo {
+  font-family: Comic Sans MS;
+  color: #2e4f6b;
+  /* #649fbd; */
+  font-weight: bold;
+}
+
+.bee {
+  font-family: sans-serif;
+
+  color: #e6537b;
+}
+
+/* ... your existing styles ... */
+
+/* Position Navbar at the bottom on small screens */
+
+@media (max-width: 767px) {
+  .myNav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Adjust the z-index as needed */
+  }
+  /* .barChart{
+    height: 100px !important;
+    width: 200px !important;
+  display: block;
+  } */
+
+  .lg\:navbar {
+    justify-content: space-between;
+    /* Adjust alignment as needed */
+    padding-top: 0.5rem;
+    /* Add padding to the top for better visibility */
+    padding-bottom: 0.5rem;
+    /* Add padding to the bottom for spacing */
+  }
+}
+
+/* ... more of your existing styles ... */
+
+/* styles.css */
+
+/* Global CSS FOR STORY */
+
+.main-slider .swiper-button-next,
+.main-slider .swiper-button-prev {
+  @apply absolute bottom-0 bg-black text-white w-6 h-6 rounded-full hidden sm:flex items-center justify-center;
+}
+
+.main-slider .swiper-button-next {
+  margin-right: -10px;
+}
+
+.main-slider .swiper-button-prev {
+  margin-left: -10px;
+}
+
+.main-slider .swiper-button-next::after,
+.main-slider .swiper-button-prev::after {
+  @apply text-xs font-bold;
+}
+
+/* .my-container {
+  @apply w-full 2xl:max-w-screen-xl mx-auto;
+} */
+
+.chatui {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0;
+}
+.message-container {
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.massage-sidebar {
+  background-color: white;
+  flex: 1;
+}
+
+.rightside {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.fade-in-out {
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.link-item {
+  transition-duration: 1000ms;
+}
+
+.show .link-item {
+  opacity: 1;
+}
+.menu-icon {
+  transition: transform 0.3s ease; /* Adjust the duration (0.3s) for the animation speed */
+}
+
+.placeholder-white::placeholder {
+  color: white;
+}
+
+.name {
+  font-family: Segoe Print;
+}
+/* body{
+  background-color: #00DBDE;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+  
+
+} */
+/* Dashboard  */
+
+.btn-primary {
+  background-color: #2e4f6b;
+  opacity: 0.7;
+  border-radius: 6px;
+  border: 1px solid #2e4f6b;
+  font-weight: bold;
+  color: black;
+}
+.btn-primary:hover {
+  background-color: #2e4f6b;
+  /* #3e0eee95; */
+  font-weight: bold;
+  color: white;
+  border: none;
+  opacity: 1;
+}
+.search-primary {
+  background-color: #fafbfc7e;
+}
+.search-primary:hover {
+  background-color: #2e4f6b;
+}
+
+.active {
+  border: 1px solid #0d8585;
+
+  border-radius: 10px;
+}
+
+.sideActive {
+  border: 1px solid #eaf3f3;
+  background-color: #eaedf1 !important;
+  border-radius: 8px;
+  padding: 6px 0px;
+  
+}
+.loaderContainer {
+  
+  background: rgb(238,243,245);
+background: linear-gradient(90deg, rgba(238,243,245,0.23853291316526615) 18%, rgba(2, 90, 51, 0.245) 83%);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Minimum height to cover the entire viewport */
+}
